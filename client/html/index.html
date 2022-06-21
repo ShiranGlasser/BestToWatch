@@ -1,0 +1,73 @@
+<!-- 
+    Shiran Glasser and Roni Fahndrich
+    The main user page
+    will show the list of all the movies, their details and the user's options. 
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- load jquary from CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="/css/style.css" rel="stylesheet" /> <!-- load our style css file -->
+  <script src="/js/client.js"></script> <!-- load our javascript file -->
+</head>
+
+<body>
+  <!-- the headline of the page with the option to sort the movies -->
+  <div id="title" class="title">
+    <h1 id="B2W" class="B2W">Best2Watch</h1>
+    <h1 class="sortBy">SORT BY:</h1>
+    <p class="selects">
+      <select id="selectop" class="selectop" onchange="sortList(this.value)">
+        <option value="date DOWN">date down</option>
+        <option value="date UP">date up</option>
+        <option value="name UP">name up</option>
+        <option value="rating UP">rating up</option>
+        <option value="name DOWN">name down</option>
+        <option value="rating DOWN">rating down</option>
+      </select>
+      <button class="button-33" role="button" onclick="location.href = '/addMovie'">Add new Movie</button>
+  </div>
+
+  <!-- The movies list -->
+  <div id="moviesTable" class="moviesTable"></div>
+  <div class="edit_movie_form" id="edit_movie_form"></div>
+
+  <!-- add an actor's list modal -->
+  <div class="actorsModal" id="actorsModal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="actorsList" id="actorsList"></div>
+    </div>
+  </div>
+
+  <!-- add an actor popup form -->
+  <div class="form-popup" id="myForm">
+    <form id="form-container" class="form-container" name="form-container" method="PUT">
+      <div id="titleOfAddActor"></div>
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Actor's name" name="name" id="name" required>
+      <label for="picture"><b>Picture URL</b></label>
+      <input type="url" placeholder="Picture's actor URL" name="picture" id="picture" required>
+      <label for="site"><b>Website URL</b></label>
+      <input type="url" placeholder="Actor's website URL" name="site" id="site" required>
+
+      <button type="submit" class="btn">Add</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+
+    </form>
+  </div>
+
+  <button class="button-33" role="button" onclick="location.href = '/addMovie'">Add new Movie</button>
+
+</body>
+
+</html>
+
+
+<!-- HTML !-->
+

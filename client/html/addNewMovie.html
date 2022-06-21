@@ -1,0 +1,93 @@
+<!-- The form page showed to the user when pressing the "add new movie"
+        button on the main page
+        The form collectes the details from the user and sends them to the server for the adding-->
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Add Movie</title>
+    <!-- load bootstrap via CDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    x
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+        "></script> <!-- load jquery via CDN -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="/js/new_movie.js">
+    </script> <!-- load our javascript file -->
+</head>
+
+<body>
+    <!-- the form navigation button-returns to the main page -->
+    <button class="add_movie"><a href="/list">Return</a></button>
+
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>add new movie</h1>
+        <form class="movie_form" id="movie_form" name="movie_form" method="POST">
+
+            <!-- Movie ID -->
+            <div id="id-group" class="form-group">
+                <label for="movieId">Movie ID</label>
+                <input type="text" class="form-control" name="id_field" id="id_field" placeholder="write movie id here"
+                    required>
+            </div>
+
+            <!-- Movie name -->
+            <div id="name-group" class="form-group">
+                <label for="name">Movie Name</label>
+                <input type="text" class="form-control" name="name" id="moviename" placeholder="write movie name here"
+                    required>
+            </div>
+
+            <!-- picture URL -->
+            <div id="picture-group" class="form-group">
+                <label for="picture">Picture URL</label>
+                <input type="url" class="form-control" name="picture" id="picture"
+                    placeholder="https://xxxxxxx (the link for the movie's picture" required>
+            </div>
+
+            <!-- Director Name -->
+            <div id="director-group" class="form-group">
+                <label for="director">Director Name</label>
+                <input type="text" class="form-control" name="director" id="director"
+                    placeholder="write Director's name here">
+            </div>
+
+            <!-- Date -->
+            <div id="date-group" class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" name="date" id="date" placeholder="enter dd-mm-yyyy" required>
+            </div>
+
+            <!-- rating -->
+            <div id="rating-group" class="form-group">
+                <label for="rating">Rating(1-5)</label>
+                <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required>
+                <!-- errors will go here -->
+            </div>
+
+            <!-- isSeries -->
+            <div id="isSeries-group" class="form-group">
+                <label for="isSeries"> is it a series or a movie? </label>
+                <p></p>
+                <input type="radio" id="isMovie_" name="isSeries" value="Movie" checked>
+                <label for="isMovie_">Movie</label>
+                <input type="radio" id="isSeries_" name="isSeries" value="Series">
+                <label for="isSeries_">Series</label>
+            </div>
+            <!-- series's details -->
+            <div id="seasonsDiv" class="=seasonsDiv">
+                <label for="isSeries"> Enter how Many seasons in this series:</label>
+                <p></p>
+                <input type="number" class="form-control" id="seasons" name="seasons" min="1" onchange=handleSeasons()>
+                <div id="episodesDiv" class="episodesDiv"></div>
+            </div>
+
+            <!-- form buttons -->
+            <button type="submit" class="btn btn-success" on>Submit <span class="fa fa-arrow-right"></span></button>
+            <button type="button" class="btn btn-danger" onclick="location.href = '/list'">Cancel</button>
+        </form>
+    </div>
+</body>
+
+</html>

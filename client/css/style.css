@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+/* body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;} */
+
+
+/*
+*   popup form for adding an actor
+*/
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=url] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=url]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/*
+* home page style
+*/
+
+/* top of the page:*/
+.title{
+  border: none;
+  height: 100px;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: stretch;  
+  background-color:rgb(58, 57, 57);
+
+}
+body{
+  border: none;
+  background-image: url('background.jpg');
+}
+
+.B2W {
+  color: ivory;
+    font-family:monospace;
+    font-size: 80px;
+    text-indent:75px;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+.sortBy{
+  color: ivory;
+  font-size: 10px;
+    position: absolute;
+    font-family: Arial;
+    top: 11px;
+    left: 1010px;
+    height: 25px;
+    padding: 5px 25px;
+    border-radius:8px;   
+}
+
+/* CSS */
+.button-33 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-33:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-33:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+
+.title .button-33{
+  position: absolute;
+  top: 30px;
+
+    /* position: absolute;
+    font-family: Arial;
+    left: 100px;
+    height: 45px;
+    border-color: rgb(255, 255, 255) ;
+    background-color:rgb(255, 255, 255);
+    font-family: Arial;
+    padding: 5px 25px;
+    border-radius:20px;    */
+}
+.selectop{
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+    position: absolute;
+    font-family: Arial;
+    top: 36px;
+    left: 1000px;
+    height: 25px;
+	background-color:rgba(231, 201, 68, 0.959);
+    padding: 5px 25px;
+    border-radius:8px; 
+}
+
+
+/*
+  main page- movies list
+*/
+
+.moviesTable{
+  position: relative;
+} 
+ 
+.obj{
+      text-align: center;
+
+  border: 1px solid black;
+  font-family: Helvetica, sans-serif;
+  font-size: 10;
+  text-indent: 74px;
+    opacity: 0.7;
+    width: 1200px;
+   height: 220px; 
+   background-image: url('obj-background2.jpg'); 
+    margin:20px;
+  border-radius: 20px; 
+    position: relative;
+}
+
+
+     .movieImg{
+    height: 210px;
+    margin: 0 auto;
+    object-position: left;  
+     bottom:5px;
+    border-radius: 20px;
+    width: 210px;
+     left: 0px;
+ }
+  .name{
+    font-size: 40px;
+    color: rgba(231, 201, 68, 0.959);
+  }
+  .text{
+    object-position: center; 
+    width: 850px;
+  }
+  .buttons{ 
+/* object-position: center;  */
+right: 0px;
+width: 750px;
+position: relative;
+  }
+  
+
+ 
+
+/* The Modal (background) */
+.actorsModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.actorsTitle{
+  color:white;
+  
+  text-align: center;
+}
+
+/* the Modal foe actor's list */
+.modal-content {
+  background-color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20 px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  color:white;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* editMovie */
+/* addActorToMovie */
+/* deleteMovie */
+/* watchActors */
+
+ .addActorToMovie, .deleteMovie, .watchActors, .editMovieB{
+  background-color: #555;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.editMovieB :hover, .addActorToMovie:hover, .deleteMovie:hover, .watchActors:hover,
+.editMovieB :focus, .addActorToMovie:focus, .deleteMovie:focus, .watchActors:focus{
+  background-color: black;
+}
+.actor{
+  background-color: #555;
+  text-align: center;
+  margin:20px;
+  border-radius: 20px; 
+  display: flex;
+  /* height: 80px; */
+  /* background-color:azure; */
+  /* margin:20px; */
+  /* border-radius: 20px; */
+  align-items: center;
+  justify-content:space-between ;
+  height:110px;
+
+}
+.actorpicture{
+  height: 100px;
+  position: absolute;
+    display: inline-block;
+    margin-left: 300px;
+}
+
+.deleteActorB{
+
+  background-color:rgb(41, 40, 40);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.deleteActorB:hover,
+.deleteActorB:focus{
+  background-color: black;
+}
